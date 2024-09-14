@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notaa/Feature/01.auth/presentation/views/login_view.dart';
 
 void main() {
   runApp(const Notaa());
@@ -10,7 +11,8 @@ class Notaa extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomeView(),
+      debugShowCheckedModeBanner: false,
+      home: LoginView(),
     );
   }
 }
