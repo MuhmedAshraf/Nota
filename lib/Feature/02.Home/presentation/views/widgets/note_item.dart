@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 
 import '../../../../../Core/utils/colors.dart';
 import '../../../../../Core/utils/styles.dart';
+import '../../../data/models/note_model.dart';
 
 class NoteItem extends StatelessWidget {
-  const NoteItem({super.key});
+  final NoteModel note ;
+  const NoteItem({super.key, required this.note});
 
   @override
   Widget build(BuildContext context) {

@@ -19,7 +19,7 @@ class HomeView extends StatelessWidget {
           style: AppStyles.title,
         ),
       ),
-      body: const ListNotesBody(),
+      body: const SafeArea(child: ListNotesBody()),
       floatingActionButton: FloatingActionButton(
         shape:  const CircleBorder(),
         onPressed: () {},
