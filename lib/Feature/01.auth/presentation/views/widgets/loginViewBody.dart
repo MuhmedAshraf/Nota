@@ -6,6 +6,7 @@ import 'package:notaa/Feature/01.auth/data/repo/auth_repo_implemet.dart';
 import 'package:notaa/Feature/01.auth/presentation/view_models/auth_cubit/user_state.dart';
 import 'package:notaa/Feature/01.auth/presentation/views/widgets/page_header.dart';
 import 'package:notaa/Feature/01.auth/presentation/views/widgets/page_heading.dart';
+import 'package:notaa/Feature/02.Home/presentation/views/home_view.dart';
 import '../../../../../Core/utils/assets.dart';
 import '../../view_models/auth_cubit/user_cubit.dart';
 import 'custom_form_button.dart';
@@ -27,8 +28,7 @@ class LoginViewBody extends StatelessWidget {
           if (state is SignInSuccess) {
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text(state.message)));
-            // Navigator.push(context,
-            //     MaterialPageRoute(builder: (context) => const ProfileScreen()));
+         Navigator.push(context, MaterialPageRoute(builder: (context)=>const HomeView()));
           } else if (state is SignInFailure) {
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text(state.errMessage)));

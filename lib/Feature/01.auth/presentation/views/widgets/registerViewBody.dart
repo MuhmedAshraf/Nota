@@ -8,6 +8,7 @@ import 'package:notaa/Feature/01.auth/presentation/view_models/auth_cubit/user_s
 import 'package:notaa/Feature/01.auth/presentation/views/widgets/page_header.dart';
 import 'package:notaa/Feature/01.auth/presentation/views/widgets/page_heading.dart';
 import '../../../../../Core/utils/assets.dart';
+import '../../../../02.Home/presentation/views/home_view.dart';
 import 'already_have_an_account_widget.dart';
 import 'custom_form_button.dart';
 import 'custom_input_field.dart';
@@ -25,8 +26,8 @@ class RegisterViewBody extends StatelessWidget {
           if (state is SignInSuccess) {
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text(state.message)));
-            // Navigator.push(context,
-            //     MaterialPageRoute(builder: (context) => const ProfileScreen()));
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => const HomeView()));
           } else if (state is SignInFailure) {
             ScaffoldMessenger.of(context)
                 .showSnackBar(SnackBar(content: Text(state.errMessage)));
